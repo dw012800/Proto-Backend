@@ -61,6 +61,9 @@ const UserSchema = new mongoose.Schema({
   app.use(morgan("dev")); // logging
   app.use(express.json()); // parse json bodies
 
+  let cards = [];
+
+
 
   app.get('/',async (req, res) => {
     const found1 = await bankUser.find({})
@@ -97,3 +100,4 @@ const UserSchema = new mongoose.Schema({
       res.status(400).json(error);
     }
   });
+
