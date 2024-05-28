@@ -22,10 +22,10 @@ const morgan = require("morgan");
 // DATABASE CONNECTION
 ////////////////////////////////
 // Establish Connection
-mongoose.connect(DATABASE_URL, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-});
+// mongoose.connect(DATABASE_URL, {
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true,
+// });
 // Connection Events
 mongoose.connect(`${DATABASE_URL}`)
 .then(()=> {
@@ -84,12 +84,28 @@ const UserSchema = new mongoose.Schema({
   app.post("/User", async (req, res) => {
     try {
       // send all people
-      res.json(await bankUser.create(req.body));
+      const newUser = (await bankUser.create(req.body));
+      res.json(newUser);
     } catch (error) {
       //send error
       res.status(400).json(error);
     }
   });
+
+  app.post('/log', async (req, res) => {
+    const { username } = req.body;
+    try {
+        const user = await bankUser.findOne({ Username: username });
+        if (user) {
+            res.json({ success: true, id: user._id });
+        } else {
+            res.json({ success: false, message: 'User not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
 
   app.get("/all", async (req, res) => {
     try {
