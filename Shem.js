@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema({
     creditScore: Number,
     checkingAccount: Number,
     Money: Number,
+    pic:String
   });
 
   const Bankshem = mongoose.model('bankUser',UserSchema)

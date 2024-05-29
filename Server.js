@@ -117,3 +117,42 @@ const UserSchema = new mongoose.Schema({
     }
   });
 
+
+  app.get("/all/:id", async (req, res) => {
+    try {
+      // send all people
+      res.json(await bankUser.find({}));
+    } catch (error) {
+      //send error
+      res.status(400).json(error);
+    }
+  });
+
+
+
+
+  app.put("/all/:id", async (req, res) => {
+    const { id } = req.params;
+    try {
+        const updatedUser = await bankUser.findByIdAndUpdate(id, req.body, { new: true });
+        if (!updatedUser) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        res.json(updatedUser);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+});
+
+app.delete("/all/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+      const deletedUser = await bankUser.findByIdAndDelete(id);
+      if (!deletedUser) {
+          return res.status(404).json({ message: "User not found" });
+      }
+      res.json(deletedUser);
+  } catch (error) {
+      res.status(400).json({ message: error.message });
+  }
+});
