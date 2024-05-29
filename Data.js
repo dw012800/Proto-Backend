@@ -59,6 +59,51 @@ const dumbData =  [
         "_id":"4",
          "pic":"https://www.google.com/imgres?imgurl=https%3A%2F%2Ffacts.net%2Fwp-content%2Fuploads%2F2023%2F10%2F17-unbelievable-facts-about-mike-jones-1697778556.jpg&tbnid=olAXQJztU8B7PM&vet=12ahUKEwiqhdjYoLKGAxV4rokEHe3LBUMQMygEegQIARBv..i&imgrefurl=https%3A%2F%2Ffacts.net%2Fcelebrity%2F17-unbelievable-facts-about-mike-jones%2F&docid=nYKl61rxd5AUCM&w=1337&h=891&q=mike%20jones&ved=2ahUKEwiqhdjYoLKGAxV4rokEHe3LBUMQMygEegQIARBv",
          "Money":"800000"
+    } ,
+
+    {
+        "Username":"richguy123",
+        "Password":"",
+        "name": "Poor Bob",
+        "email": "bob@gmail.com",
+        "phonenumber":"213-684-5632",
+        "loanOfficer":null,
+        "loanPending":null,
+        "creditScore": "300",
+        "CheckingAccount":"582359180",
+        "_id":"5",
+         "pic":"https://yt3.googleusercontent.com/ZJGwKd4H-lsmPo6cZ2WJ7aaU6uRJYOAmj-MDIDy_Se0sUu3iM41hG3KXgVz690DeEPRqxaKx=s900-c-k-c0x00ffffff-no-rj",
+         "Money":"50"
+    },
+
+    {
+        "Username":"mickeymouse",
+        "Password":"",
+        "name": "Mickey Mouse",
+        "email": "MickeyMouse@disney.com",
+        "phonenumber":"714-601-8838",
+        "loanOfficer":null,
+        "loanPending":null,
+        "creditScore": "750",
+        "CheckingAccount":"7019081080",
+        "_id":"6",
+         "pic":"https://d23.com/app/uploads/2013/04/1180w-600h_mickey-mouse_1.jpg",
+         "Money":"6000000"
+    },
+
+    {
+        "Username":"BruceWayne",
+        "Password":"",
+        "name": "Bruce Wayne",
+        "email": "notbatman@gmail.com",
+        "phonenumber":"556-613-8825",
+        "loanOfficer":null,
+        "loanPending":null,
+        "creditScore": "845",
+        "CheckingAccount":"412414151",
+        "_id":"7",
+         "pic":"https://sites.rutgers.edu/acal51/wp-content/uploads/sites/291/2017/12/3859882-6269102771-Bruce.jpg",
+         "Money":"40000000"
     } 
 
 
