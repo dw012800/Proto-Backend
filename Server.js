@@ -67,7 +67,7 @@ const UserSchema = new mongoose.Schema({
 
   app.get('/',async (req, res) => {
     const found1 = await bankUser.find({})
-    
+    res.send('Hello World')
    
    
    })
